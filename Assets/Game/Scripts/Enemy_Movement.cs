@@ -3,9 +3,12 @@ using UnityEngine;
 public class Enemy_Movement : MonoBehaviour
 {
     Animator ani;
+
+    [Header("Ground Check")]
     [SerializeField] GameObject PlayerCheck;
     [SerializeField] Transform attackCheck;
     [SerializeField] LayerMask Playerlayer;
+
     public int maxHealth = 100;
     public int currentHealth;
     bool isfacingright;
@@ -33,11 +36,12 @@ public class Enemy_Movement : MonoBehaviour
 
     void attack()
     {
-        Collider2D[] Player = Physics2D.OverlapCircleAll(attackCheck.transform.position, 0.5f, Playerlayer);
-        foreach (Collider2D Players in Player)
-        {
-            Players.GetComponent<Player_Movement>().Damage(20);
-        }
+        Collider2D Player = Physics2D.OverlapCircle(attackCheck.transform.position, 0.5f, Playerlayer);
+
+            if(Player != null)
+            {
+                Player.GetComponent<Player_Movement>().Damage(20);
+            }
     }
 
     public void takeDamage(int damage)

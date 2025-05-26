@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Level_1_Manager : MonoBehaviour
 {
-    GameObject loadscripts;
     private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -29,6 +28,7 @@ public class Level_1_Manager : MonoBehaviour
     public void Mainmenu()
     {
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
 
     public void Exit()
