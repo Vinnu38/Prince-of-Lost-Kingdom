@@ -10,7 +10,6 @@ public class Level_1_Manager : MonoBehaviour
 
     public void nextlevel()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("Level_2");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -19,7 +18,6 @@ public class Level_1_Manager : MonoBehaviour
 
     public void Retry()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("Level_1");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

@@ -68,10 +68,11 @@ public class Player_Movement : MonoBehaviour
             myAnim.SetTrigger("isAttacking");
         }
 
-        if(transform.position.y < -12)
+        if(transform.position.y < -10)
         {
             Debug.Log("dead");
-            Time.timeScale = 0;
+            isEnd= true;
+            _rb.bodyType = RigidbodyType2D.Static;
             UI.SetActive(true);
             Cursor.lockState =  CursorLockMode.None;
             Cursor.visible = true; 
@@ -137,7 +138,6 @@ public class Player_Movement : MonoBehaviour
 
     void afterDead()
     {
-        Time.timeScale = 0;
         UI.SetActive(true);  
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -189,8 +189,7 @@ public class Player_Movement : MonoBehaviour
             isEnd = true;
             _rb.velocity = Vector3.zero;
 
-            nextUI.SetActive(true);
-            Time.timeScale = 0f;
+            nextUI.SetActive(true); 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }

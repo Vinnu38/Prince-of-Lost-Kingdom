@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu_Manager : MonoBehaviour
 {
+    public static PauseMenu_Manager Instance;
+
     [SerializeField] GameObject Pause;
-    bool Game;
-    // Update is called once per frame
+    public bool Game;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -27,7 +37,6 @@ public class PauseMenu_Manager : MonoBehaviour
        
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Time.timeScale = 0f;
         Pause.SetActive(true);
         Game = false;
     }
@@ -35,7 +44,6 @@ public class PauseMenu_Manager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        Time.timeScale = 1f;
         Pause.SetActive(false);
         Game = true;
     }
@@ -44,10 +52,9 @@ public class PauseMenu_Manager : MonoBehaviour
     {
         ResumeMenu();
     }
+
     public void menu()
     {
-
-        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
