@@ -9,9 +9,7 @@ public class Menu_Manager : MonoBehaviour
      public void startMenu()
      {
         SceneManager.LoadScene("Level_1");
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
     }
 
     public void endMenu()

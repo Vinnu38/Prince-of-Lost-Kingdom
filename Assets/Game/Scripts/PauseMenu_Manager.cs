@@ -35,14 +35,14 @@ public class PauseMenu_Manager : MonoBehaviour
     void PauseMenu()
     {
        
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Pause.SetActive(true);
         Game = false;
     }
     void ResumeMenu()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Pause.SetActive(false);
         Game = true;

@@ -13,7 +13,7 @@ public class camera_movement : MonoBehaviour
     {
         if (target.transform.position.x < 140)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, target.transform.position - offset, ref velocity, 1f);
+            transform.position = Vector3.SmoothDamp(transform.position, target.transform.position - offset, ref velocity, .5f);
         }
 
         
