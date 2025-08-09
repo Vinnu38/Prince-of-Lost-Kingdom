@@ -22977,10 +22977,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2885537544798990421, guid: 8451d653c7225e84ea29783e51d7d637, type: 3}
-      propertyPath: m_GravityScale
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4552438884519984497, guid: 8451d653c7225e84ea29783e51d7d637, type: 3}
       propertyPath: m_Name
       value: Prince
@@ -22990,17 +22986,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 812289565}
     - target: {fileID: 5581195694026121083, guid: 8451d653c7225e84ea29783e51d7d637, type: 3}
-      propertyPath: speed
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581195694026121083, guid: 8451d653c7225e84ea29783e51d7d637, type: 3}
       propertyPath: nextUI
       value: 
       objectReference: {fileID: 1009009188}
-    - target: {fileID: 5581195694026121083, guid: 8451d653c7225e84ea29783e51d7d637, type: 3}
-      propertyPath: jumpforce
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5581195694026121083, guid: 8451d653c7225e84ea29783e51d7d637, type: 3}
       propertyPath: player_Health
       value: 

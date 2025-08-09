@@ -16,7 +16,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] float jumpforce;
 
     [Header("Player Health UI")]
-    [SerializeField]Player_Health player_Health;
+    [SerializeField] Player_Health player_Health;
     [SerializeField] GameObject UI;
     [SerializeField] GameObject nextUI;
 
@@ -131,7 +131,7 @@ public class Player_Movement : MonoBehaviour
         
         if (currentHealth == 0)
         {
-            Debug.Log("Attack");
+            Debug.Log("Attacked");
             myAnim.SetTrigger("isDead");
         }
     }
